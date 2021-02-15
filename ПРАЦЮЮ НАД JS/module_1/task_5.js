@@ -25,13 +25,44 @@ const costOfDeliveryAustralia = 170;
 const costOfDeliveryIndia = 80;
 const costOfDeliveryJamaica = 120;
 
-let costDelivery;
-const messageUser = prompt("Укажите страну доставки");
+const messegeUserToUpperCase = prompt("Укажите страну доставки");
 
-let messegeUserToUpperCase = messageUser.toUpperCase();
+if (messegeUserToUpperCase === null) {
+  console.log("ничего не введено!!!");
+} else {
+  switch (messegeUserToUpperCase) {
+    case countryOfDeliveryChina:
+      console.log(
+        `Доставка в ${messegeUserToUpperCase} будет стоить ${costOfDeliveryChina} кредитов`
+      );
+      break;
 
-switch (messegeUserToUpperCase) {
-  case countryOfDeliveryChina:
-    costDelivery = costOfDeliveryChina;
-    break;
+    case countryOfDeliveryAustralia:
+      console.log(
+        `Доставка в ${messegeUserToUpperCase} будет стоить ${costOfDeliveryAustralia} кредитов`
+      );
+      break;
+
+    case countryOfDeliveryChili:
+      alert(
+        `Доставка в ${messegeUserToUpperCase} будет стоить ${costOfDeliveryChili} кредитов`
+      );
+      break;
+
+    case countryOfDeliveryIndia:
+      console.log(
+        `Доставка в ${messegeUserToUpperCase} будет стоить ${costOfDeliveryIndia} кредитов`
+      );
+      break;
+
+    case countryOfDeliveryJamaica:
+      console.log(
+        `Доставка в ${messegeUserToUpperCase} будет стоить ${costOfDeliveryJamaica} кредитов`
+      );
+      break;
+
+    default:
+      alert("В вашей стране доставка не доступна");
+      break;
+  }
 }
