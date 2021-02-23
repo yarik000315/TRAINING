@@ -53,12 +53,14 @@ const isLoginValid = function (login) {
   const result = 4 < login.length && login.length < 16;
   return result;
 };
+console.log(`isLoginValid: ${isLoginValid("qwefjj")}`);
+
 // Напиши функцию isLoginUnique(allLogins, login), которая принимает список всех логинов и добавляемый логин как параметры и проверяет наличие login в массиве allLogins, возвращая true если такого логина еще нет и false если логин уже используется.
 const isLoginUnique = function (allLogins, login) {
   const isInclude = allLogins.includes(login);
   return isInclude;
 };
-
+console.log(`isLoginUnique: ${isLoginUnique(logins, "qwdsdsgde")}`);
 // Напиши функцию addLogin(allLogins, login) которая:
 // Принимает новый логин и массив всех логинов как параметры
 // Проверяет валидность логина используя вспомогательную функцию isLoginValid
@@ -67,11 +69,7 @@ const isLoginUnique = function (allLogins, login) {
 // Если isLoginUnique вернет false, тогда addLogin не добавляет логин в массив и возвращает строку 'Такой логин уже используется!'
 // Если isLoginUnique вернет true, addLogin добавляет новый логин в logins и возвращает строку 'Логин успешно добавлен!'
 
-const addLogin = function (allLogins, login) {
-  const isLoginValid = function (login) {
-    const result = 4 < login.length && login.length < 16;
-    console.log(result);
-  };
-};
+const addLogin = function (allLogins, login) {};
 
-addLogin(logins, "qwdsdsgde");
+// addLogin(logins, "qwdsdsgde");
+// isLoginValid("qwegh");
